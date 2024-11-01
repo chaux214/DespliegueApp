@@ -1,93 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ STORE</title>
+    <title>AZ_STORE</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-    <!--Seccion de navegacion-->
 <body>
-    <h1>¡BIENVENIDOS! AZ_STORE</h1>
-    <nav>
-        <ul>
-            <li><a href="#camisetas" class="barra_nav">CAMISETAS</a></li>
-            <li><a href="#gorras" class="barra_nav">GORRAS</a></li>
-            <li><a href="/Bolsos/bolsos.html" class="barra_nav" target="_blank">BOLSOS UNISEX</a></li>
-            <li><a href="nosotros" class="barra_nav">NOSOTROS</a></li>
-            <li><a href="accesorios" class="barra_nav">ACCESORIOS</a></li>
-        </ul>
-    </nav>
-    <!--imagen en toda la mitad de la pagina (sitio web)-->
     <header>
-        <img src="Captura de pantalla 2024-08-27 094212.png" alt="Logo tienda" width="600" height="800">
-        <h2>¡ESTILO, HONOR Y MODA 💎!</h2>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">AZ_STORE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#camisetas">CAMISETAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gorras">GORRAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Bolsos/bolsos.html" target="_blank">BOLSOS UNISEX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Sobre_Nosotros/nosotros.html" target="_blank">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accesorios">ACCESORIOS</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <!--Seccion para realizar ejemplos de ropa y demas. -->
-    <section class="productos-venta">
-        <div class="productos">
-            <img src="images/producto1.jpg" alt="camiseta" width="400" height="500">
-            <h3>CAMISETA CASA BLANCA</h3>
-            <p>Camiseta importada 1.1 <br>
-                $100.000
-            </p>
-        </div>
-        <div class="productos">
-            <img src="images/producto2.jpg" alt="pantaloneta" width="400" height="500">
-            <h3>PANTALONETA PSYCHO BUNNY</h3>
-            <p> Calidad impermeable, para cualquier ocasión. <br>
-                $85.000
-            </p>
-        </div>
-        <div class="productos">
-            <img src="images/producto3.jpg" alt="billeteras" width="400" height="500">
-            <h3>BILLETERA LV</h3>
-            <p>Referencia en cuero de la mas alta calidad. <br>
-                $75.000
-            </p>
-        </div>
-        <div class="productos">
-            <img src="images/producto4.jpg" alt="camibuso polo" width="400" height="500">
-            <h3>POLOS EUROPEOS 1.1</h3>
-            <p>Tela de alto grmaje 290. <br>
-                110.000 </p>
-        </div>
-        <div class="productos">
-            <img src="images/Producto5.jpg" alt="jean amiri" width="400" height="500">
-            <h3>JEAN IMPORTADO (MULTIMARCAS).</h3>
-            <p>Jeans tipo original. <br>
-                $165.000
-            </p>
-        </div>
-        <div class="productos">
-            <img src="images/producto6.jpg" alt="gafas" width="400" height="500">
-            <h3>GAFAS VERSACE</h3>
-            <p>Filtro UV400 , con estuche. <br>
-                $65.000
-            </p>
+
+    <section class="productos-venta container my-5">
+        <h2 class="text-center mb-4">PRODUCTOS EN VENTA</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/producto1.jpg" class="card-img-top" alt="camiseta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CAMISETA CASA BLANCA</h5>
+                        <p class="card-text">Camiseta importada 1.1 <br> $100.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/producto2.jpg" class="card-img-top" alt="camiseta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CAMISETA HUESOS</h5>
+                        <p class="card-text">Camiseta importada 1.1 <br> $100.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/producto3.jpg" class="card-img-top" alt="camiseta">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CAMISETA PLANET</h5>
+                        <p class="card-text">Camiseta importada 1.1 <br> $100.000</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Realizamos un tipo formulario para el registro de las personas a nuestra base de datos-->
-    <section class="registro">
-        <form class="formulario">
-            <div class="informacion">
-            <label for="nombre"> Nombre </label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+    <section class="registro my-5 container">
+        <h2 class="text-center mb-4">Formulario de Registro</h2>
+        <form class="p-4 bg-dark text-white rounded shadow">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required>
             </div>
-            <div class="informacion">
-            <label for="telefono"> Telefono </label>
-            <input type="text" id="telefono" name="telefono" placeholder="Numero telefonico" required>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Número telefónico" required>
             </div>
-            <div class="informacion">
-            <label for="correo"> Correo electronico </label>
-            <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo" required>
             </div>
-            <button type="submit">Regristro</button>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Registrar</button>
         </form>
     </section>
-    <footer>
+
+    <footer class="text-center py-4 bg-light text-dark font-weight-bold">
         <p>&copy; Todos los derechos reservados 2024.</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

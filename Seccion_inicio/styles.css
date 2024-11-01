@@ -1,145 +1,43 @@
-body{
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+/* styles.css */
+
+/* Estilos de encabezado */
+header {
+    background-color: #343a40;
     color: white;
-    margin: 0;
-    padding: 0;
-}
-h1{
-    display: flex;
-    justify-content: center;
-}
-nav{
-    background-color:rgb(68, 61, 61);
-    padding: 10px;
-}
-nav ul {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-nav ul li{
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-nav ul li a:hover{
-    color: rgb(0, 0, 0);
-}
-.barra_nav{
-    margin: 0px 10px 0px 10px;
+    padding: 10px 0;
 }
 
- /*SECTION HEADER */
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
+/* Estilos para el nombre de la tienda */
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
 }
-header img{
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}   
-header h2{
-    margin: 0;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-   /*SECTION PRODUCTOS-VENTA*/
+
+/* Productos en Venta */
 .productos-venta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.productos{
-    width: 30%;
-    margin-bottom: 20px;
     text-align: center;
 }
-.productos img{ 
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-.productos img:hover{
-    transform: scale(1.05);
-}
-.productos h3{
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-.productos p{
-    margin-top: 10px;
-    font-size: 1em;
-    color: #555;
+
+.productos-venta h2 {
+    font-size: 2rem;
+    color: #343a40;
 }
 
-/* FORMULARIO*/
-.registro{
-    margin-top: 40px; 
-    display: flex;
-    justify-content:center ;
+/* Registro */
+.registro {
+    max-width: 600px;
 }
-.formulario{
-    background-color: #000000;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.informacion label{
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.informacion input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-button{
-    background-color: blue;
+
+.formulario {
+    background-color: #343a40;
+    padding: 20px;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 10px;
+    border-radius: 8px;
 }
-button:hover{
-    background-color:chartreuse;
-    transform: scale3d(1.05);
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
 }
-footer{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    width: 100%;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 20px 0;
-    font-weight: bold;
-}   
 

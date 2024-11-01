@@ -1,189 +1,61 @@
-/* Estilos Generales */
+/* General */
 body {
+    background-color: #0f0e0e;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #e7edf6;
-    color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-header {
-    background-color: #070606;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
+/* Header */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 1rem;
 }
 
-.logo a {
-    color: #f5eef2;
-    font-size: 1.8rem;
-    font-weight: 700;
+.navbar-brand {
+    font-weight: bold;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
+/* Sobre Nosotros */
+.sobre-nosotros h1 {
+    font-weight: bold;
+    color: #ffffff;
 }
 
-.nav-links li {
-    margin: 0 20px;
+.sobre-nosotros p {
+    color: #d1d1d1;
 }
 
-.nav-links a {
-    color: #fffbfb;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #34f005;
-}
-
- 
-
-/* Estilos de la Sección Sobre Nosotros */
-.sobre-nosotros {
-    padding: 60px 20px;
-    background-color: #f1f1f1;
-    max-width: 1200px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.titulo-seccion {
-    font-size: 2.5rem;
-    color: #0c4342;
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.contenido-sobre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.texto-sobre {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.texto-sobre h2 {
-    font-size: 1.8rem;
-    color: #e74c3c;
-    margin-bottom: 20px;
-}
-
-.texto-sobre p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.btn-equipo {
-    display: inline-block;
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.btn-equipo:hover {
-    background-color: #e9e8e8;
-}
-
-.imagen-sobre {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.img-equipo {
-    max-width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-footer {
-    background: linear-gradient(rgb(12, 15, 12),rgb(139, 142, 149));
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
+/* Social Icons */
 .social-icons {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons li {
-    display: inline;
-    justify-items: center;
-    margin: 0 15px;
+    margin-top: 15px;
 }
 
 .social-icons a {
     color: white;
-    text-decoration: none;
     font-size: 24px;
+    padding: 10px;
     border: 2px solid white;
     border-radius: 50%;
-    padding: 10px;
-    display: inline-block;
     transition: color 0.3s, border-color 0.3s;
-    cursor: pointer;
-    text-align: center;
-    width: 30px;
-    
 }
 
 .social-icons a[href*="instagram"]:hover {
-    color: #e4405f; 
-    border-color: #e4405f; 
+    color: #e4405f;
+    border-color: #e4405f;
 }
 
 .social-icons a[href*="facebook"]:hover {
-    color: #feffff; 
-    border-color: #1877f2; 
+    color: #feffff;
+    border-color: #1877f2;
 }
 
 .social-icons a[href*="whatsapp"]:hover {
-    color: #25d366; 
-    border-color: #25d366; 
+    color: #25d366;
+    border-color: #25d366;
 }
 
 .footer-text {
     margin-top: 10px;
     font-size: 14px;
     color: #ffffff;
-}
-.fa-facebook-f{
-  width:20px;
 }
