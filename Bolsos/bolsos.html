@@ -10,93 +10,241 @@
     <link rel="stylesheet" href="bolsos.css">
 </head>
 <body>
-
-    <!-- Encabezado personalizado -->
+    <!-- Encabezado mejorado -->
     <header class="header-custom text-center py-4">
-        <h1 class="title-custom">AZ Store - Bolsos</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
-            <div class="container">
-                <a class="navbar-brand" href="#">AZ Store</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="/Seccion_inicio/inicio.html" target="_blank">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="camisetas.html">Camisetas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gorras.html">Gorras</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="bolsos.html">Bolsos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="accesorios.html">Accesorios</a></li>
-                    </ul>
+        <div class="container">
+            <h1 class="title-custom mb-4">AZ Store - Bolsos</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="imgs/LogoSample_ByTailorBrands.ico" alt="AZ Store Logo" class="me-2" style="width: 30px;">
+                        AZ Store
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="/Seccion_inicio/inicio.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="camisetas.html">Camisetas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gorras.html">Gorras</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="bolsos.html">Bolsos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="accesorios.html">Accesorios</a></li>
+                        </ul>
+                        <!-- Barra de búsqueda -->
+                        <div class="d-flex">
+                            <div class="search-container me-3">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Buscar bolsos...">
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                            <!-- Botón del carrito -->
+                            <button class="btn btn-outline-light position-relative" id="cartButton">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contador-carrito">
+                                    0
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!-- Sección de Bolsos con estilo y animaciones -->
-    <section id="bolsos" class="container my-5 text-center">
-        <h2 class="section-title">Bolsos Unisex</h2>
-        <p class="section-description">Explora nuestra colección exclusiva de bolsos de alta calidad para cualquier ocasión.</p>
-        
-        <!-- Galería personalizada -->
-        <div class="row">
-            <div class="col-md-4 mb-4">
+    <!-- Banner promocional -->
+    <div class="promo-banner text-center py-2 bg-primary text-white">
+        <p class="mb-1">🔥 ¡Ofertas especiales! Hasta 30% de descuento en bolsos seleccionados</p>
+    </div>
+
+    <!-- Sección principal de bolsos -->
+    <section id="bolsos" class="container my-5">
+        <!-- Filtros -->
+        <div class="filters-section mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title">Bolsos Unisex</h2>
+                    <p class="section-description">Explora nuestra colección exclusiva de bolsos de alta calidad.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-primary active" data-filter="todos">Todos</button>
+                        <button class="btn btn-outline-primary" data-filter="casual">Casual</button>
+                        <button class="btn btn-outline-primary" data-filter="deportivo">Deportivo</button>
+                        <button class="btn btn-outline-primary" data-filter="elegante">Elegante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería de productos -->
+        <div class="row" id="productos-container">
+            <!-- Producto 1 -->
+            <div class="col-md-4 mb-4" data-categoria="casual">
                 <div class="card h-100 card-custom">
-                    <img src="/imgs/➡️Βρες όλη την συλλόγη της Sprayground στο….jpg" class="card-img-top img-custom" alt="Bolso 1">
+                    <div class="card-badge">Nuevo</div>
+                    <div class="img-container">
+                        <img src="/imgs/➡️Βρες όλη την συλλόγη της Sprayground στο….jpg" 
+                             class="card-img-top img-custom" 
+                             alt="Bolso Casual"
+                             data-src="/imgs/➡️Βρες όλη την συλλόγη της Sprayground στο….jpg"
+                             loading="lazy">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Bolso Casual</h5>
                         <p class="card-text">Perfecto para un look casual con espacio extra.</p>
-                        <button class="btn btn-outline-danger">Ver más</button>
+                        <div class="price-section mb-3">
+                            <span class="original-price">$99.99</span>
+                            <span class="current-price">$89.99</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBolso1">
+                                <i class="fas fa-eye me-1"></i> Ver detalles
+                            </button>
+                            <button class="btn btn-primary add-to-cart" data-id="1">
+                                <i class="fas fa-shopping-cart me-1"></i> Agregar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+
+            <!-- Producto 2 -->
+            <div class="col-md-4 mb-4" data-categoria="deportivo">
                 <div class="card h-100 card-custom">
-                    <img src="/imgs/937f5968-2888-4232-b579-b97fe3efecc9.jpg" class="card-img-top img-custom" alt="Bolso 2">
+                    <div class="card-badge bg-danger">-20%</div>
+                    <div class="img-container">
+                        <img src="/imgs/937f5968-2888-4232-b579-b97fe3efecc9.jpg" 
+                             class="card-img-top img-custom" 
+                             alt="Bolso Deportivo"
+                             data-src="/imgs/937f5968-2888-4232-b579-b97fe3efecc9.jpg"
+                             loading="lazy">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Bolso Deportivo</h5>
                         <p class="card-text">Ideal para actividades al aire libre.</p>
-                        <button class="btn btn-outline-danger">Ver más</button>
+                        <div class="price-section mb-3">
+                            <span class="original-price">$99.99</span>
+                            <span class="current-price">$79.99</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBolso2">
+                                <i class="fas fa-eye me-1"></i> Ver detalles
+                            </button>
+                            <button class="btn btn-primary add-to-cart" data-id="2">
+                                <i class="fas fa-shopping-cart me-1"></i> Agregar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+
+            <!-- Producto 3 -->
+            <div class="col-md-4 mb-4" data-categoria="elegante">
                 <div class="card h-100 card-custom">
-                    <img src="/imgs/Designer Clothes, Shoes & Bags for Women _ SSENSE.jpg" class="card-img-top img-custom" alt="Bolso 3">
+                    <div class="card-badge bg-success">Premium</div>
+                    <div class="img-container">
+                        <img src="/imgs/Designer Clothes, Shoes & Bags for Women _ SSENSE.jpg" 
+                             class="card-img-top img-custom" 
+                             alt="Bolso Elegante"
+                             data-src="/imgs/Designer Clothes, Shoes & Bags for Women _ SSENSE.jpg"
+                             loading="lazy">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Bolso Elegante</h5>
                         <p class="card-text">Diseño único para ocasiones especiales.</p>
-                        <button class="btn btn-outline-danger">Ver más</button>
+                        <div class="price-section mb-3">
+                            <span class="original-price">$149.99</span>
+                            <span class="current-price">$129.99</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBolso3">
+                                <i class="fas fa-eye me-1"></i> Ver detalles
+                            </button>
+                            <button class="btn btn-primary add-to-cart" data-id="3">
+                                <i class="fas fa-shopping-cart me-1"></i> Agregar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer animado y personalizado -->
-    <footer class="footer-custom text-center py-4">
-        <ul class="social-icons list-inline">
-            <li class="list-inline-item">
-                <a href="https://www.instagram.com/az.store15_co" target="_blank" class="icon">
-                    <i class="fab fa-instagram fa-1x"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.facebook.com/miguel.chaux.31" target="_blank" class="icon">
-                    <i class="fab fa-facebook-f fa-1x"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://chat.whatsapp.com/JrJXVqoGlTuE8csNjHkzca" target="_blank" class="icon">
-                    <i class="fab fa-whatsapp fa-1x"></i>
-                </a>
-            </li>
+    <!-- Modales mejorados -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modalBolso1" tabindex="-1" aria-labelledby="modalBolso1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBolso1Label">Bolso Casual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/imgs/➡️Βρες όλη την συλλόγη της Sprayground στο….jpg" alt="Bolso Casual" class="img-fluid">
+                    <p>Descripción detallada del bolso casual, con su historia y cómo combinarlo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary add-to-cart" data-id="1">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modalBolso2" tabindex="-1" aria-labelledby="modalBolso2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBolso2Label">Bolso Deportivo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/imgs/937f5968-2888-4232-b579-b97fe3efecc9.jpg" alt="Bolso Deportivo" class="img-fluid">
+                    <p>Descripción detallada del bolso deportivo, ideal para los amantes del deporte.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary add-to-cart" data-id="2">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modalBolso3" tabindex="-1" aria-labelledby="modalBolso3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBolso3Label">Bolso Elegante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/imgs/Designer Clothes, Shoes & Bags for Women _ SSENSE.jpg" alt="Bolso Elegante" class="img-fluid">
+                    <p>Descripción detallada del bolso elegante, perfecto para eventos formales.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary add-to-cart" data-id="3">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <ul class="social-icons">
+            <li><a href="https://www.instagram.com/az.store15_co?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/miguel.chaux.31?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://chat.whatsapp.com/JrJXVqoGlTuE8csNjHkzca" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
         </ul>
         <p class="footer-text">Para nosotros es importante que tú estés a la moda.</p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="bolsos.js"></script>
 </body>
 </html>
